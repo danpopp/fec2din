@@ -27,7 +27,7 @@ ec2_filter = args.ec2_filter
 # AWS_ACCESS_KEY="aaaaaaaaaaaaaaaaaaaa"
 # AWS_SECRET_KEY="bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
 
-ec2_url="https://us-east-1.ec2.amazonaws.com"
+ec2_url="https://ec2.us-east-1.amazonaws.com"
 
 try:
   AWS_ACCESS_KEY
@@ -47,7 +47,7 @@ This would look something like:
 
 
 try:
-  ec2_url = "https://%s.ec2.amazonaws.com" % os.environ['EC2_REGION']
+  ec2_url = "https://ec2.%s.amazonaws.com" % os.environ['EC2_REGION']
 except KeyError:
   pass
 
